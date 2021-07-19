@@ -5,6 +5,7 @@ import styled,{css}from 'styled-components';
 import AppBar from './AppBar';
 import { AppProvider } from './AppProvider';
 import Setting from '../Settings';
+import Content from '../Shared/Content'
 const MyButton=styled.div`
   color:green;
   ${props => props.primary && css`
@@ -21,7 +22,9 @@ class App extends Component{
       <AppLayout>
         <AppProvider>
           <AppBar/>
-          <Setting/>
+          <Content>
+            <Setting/>
+          </Content>
         </AppProvider>
       </AppLayout>
       
