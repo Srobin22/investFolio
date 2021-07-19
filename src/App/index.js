@@ -1,11 +1,10 @@
 import React,{Component} from 'react';
 import './App.css';
 import AppLayout from './AppLayout'
-import Greeting from './greeting';
 import styled,{css}from 'styled-components';
 import AppBar from './AppBar';
 import { AppProvider } from './AppProvider';
-
+import Setting from '../Settings';
 const MyButton=styled.div`
   color:green;
   ${props => props.primary && css`
@@ -21,8 +20,8 @@ class App extends Component{
     return(
       <AppLayout>
         <AppProvider>
-        <AppBar/>
-        <Greeting/>
+          <AppBar/>
+          <Setting/>
         </AppProvider>
       </AppLayout>
       

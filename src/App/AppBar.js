@@ -12,7 +12,7 @@ const Bar=styled.div`
 const ControlButtonElem=styled.div`
     cursor:pointer;
     ${props=>props.active && css`
-        text-shadow: 0 0 40px #FF0000;
+        text-shadow: 0 0 60px #03ff03;
     `}
 `
 function captilizeFirstLetter(lower){
@@ -23,7 +23,7 @@ function ControlButton({name,active}){
         <AppContext.Consumer>
             {({page,setPage})=>(
                 <ControlButtonElem 
-                active={active}
+                active={page==name}
                 onClick={()=>setPage(name)}                
                 >
                 {captilizeFirstLetter(name)}
