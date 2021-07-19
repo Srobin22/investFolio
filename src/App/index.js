@@ -4,6 +4,8 @@ import AppLayout from './AppLayout'
 import Greeting from './greeting';
 import styled,{css}from 'styled-components';
 import AppBar from './AppBar';
+import { AppProvider } from './AppProvider';
+
 const MyButton=styled.div`
   color:green;
   ${props => props.primary && css`
@@ -18,9 +20,10 @@ class App extends Component{
   render(){
     return(
       <AppLayout>
+        <AppProvider>
         <AppBar/>
         <Greeting/>
-
+        </AppProvider>
       </AppLayout>
       
     );

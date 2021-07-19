@@ -1,5 +1,6 @@
 import React from "react"
 import styled,{css} from "styled-components"
+import { AppContext } from "./AppProvider"
 const Logo =styled.div`
     font-size: 1.5em;
 `
@@ -19,9 +20,18 @@ function captilizeFirstLetter(lower){
 }
 function ControlButton({name,active}){
     return(
-        <ControlButtonElem active={active}>
-            {captilizeFirstLetter(name)}
-        </ControlButtonElem>
+        <AppContext.Consumer>
+            {({page,setPage})=>(
+                <ControlButtonElem 
+                active={active}
+                onClick={()=>setPage(name)}                
+                >
+                {captilizeFirstLetter(name)}
+            </ControlButtonElem>
+            )}
+       
+        
+        </AppContext.Consumer>
     )
 }
 export default function(){
