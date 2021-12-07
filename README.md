@@ -1,6 +1,7 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# InvestFolio
+App that allows user to track their crypto coins.
+Created using React.
+![Alt text](gif.gif)
 
 ## Available Scripts
 
